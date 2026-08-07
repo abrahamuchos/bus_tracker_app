@@ -43,6 +43,7 @@ dependencies:
   json_annotation: ^4.9.0
   google_maps_flutter: ^2.14.0
   dartz: ^0.10.1
+  geolocator: ^14.0.0
 
 dev_dependencies:
   flutter_test:
