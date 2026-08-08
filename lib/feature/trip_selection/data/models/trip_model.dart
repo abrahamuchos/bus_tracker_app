@@ -4,7 +4,6 @@ import 'package:bus_tracker_app/feature/trip_selection/domain/entities/trip.dart
 class TripModel extends TripEntity {
   const TripModel({
     required super.id,
-    required super.routeId,
     required super.busPlate,
     required super.status,
     super.route
@@ -16,7 +15,6 @@ class TripModel extends TripEntity {
 
     return TripModel(
       id: data['id'] as int,
-      routeId: data['routeId'] as int,
       busPlate: data['busPlate'] as String,
       status: data['status'] == 'active' ? TripStatus.active : TripStatus.finished,
       route: RouteModel.fromJson(data['route'] as Map<String, dynamic>),
