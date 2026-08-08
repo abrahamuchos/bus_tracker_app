@@ -49,7 +49,7 @@ class TripSelectionPage extends StatelessWidget {
       children: [
         Text('Id: ${trip.id}'),
         Text('Bus plate: ${trip.busPlate}'),
-        Text('Status: ${trip.status}'),
+        Text('Status: ${trip.status.label}'),
         Text('Route: ${trip.route?.name}'),
       ],
     );
