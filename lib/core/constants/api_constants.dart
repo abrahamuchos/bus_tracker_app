@@ -7,4 +7,5 @@ class ApiConstants{
 
 
   static const String activeTrip = '/trips/active';
+  static const String updateTripLocation = '/trips/{trip}/locations';
 }
