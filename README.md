@@ -16,10 +16,5 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 
-Ya defini mi LocationRepository. Esta bien que haya definido el enum en el mismo archivo?
-
-abstract class LocationRepository {
-enum PermissionRequestResult { granted, denied, deniedForever }
-
 
 
