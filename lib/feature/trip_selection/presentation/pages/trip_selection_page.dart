@@ -1,3 +1,4 @@
+import 'package:bus_tracker_app/feature/location_publishing/presentation/page/location_publishing_page.dart';
 import 'package:bus_tracker_app/feature/trip_selection/domain/entities/trip.dart';
 import 'package:bus_tracker_app/feature/trip_selection/presentation/bloc/trip_selection_cubit.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +24,10 @@ class TripSelectionPage extends StatelessWidget {
                     TripSelectionLoading() => Center(
                       child: const CircularProgressIndicator(),
                     ),
-                    TripSelectionLoaded(:final trip) => _buildInfoCard(trip),
+                    TripSelectionLoaded(:final trip) => _buildInfoCard(
+                      context,
+                      trip,
+                    ),
                     TripSelectionNoActiveTrip() => const Text(
                       'Not active trip yet.',
                     ),
@@ -43,7 +47,7 @@ class TripSelectionPage extends StatelessWidget {
     );
   }
 
-  Widget _buildInfoCard(TripEntity trip) {
+  Widget _buildInfoCard(BuildContext context, TripEntity trip) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -51,6 +55,17 @@ class TripSelectionPage extends StatelessWidget {
         Text('Bus plate: ${trip.busPlate}'),
         Text('Status: ${trip.status.label}'),
         Text('Route: ${trip.route?.name}'),
+        ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => LocationPublishingPage(tripId: trip.id),
+              ),
+            );
+          },
+          child: Text("Iniciar viaje"),
+        ),
       ],
     );
   }

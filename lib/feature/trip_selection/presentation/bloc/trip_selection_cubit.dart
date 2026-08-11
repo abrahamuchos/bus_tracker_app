@@ -1,4 +1,4 @@
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:bus_tracker_app/core/usecase/usecase.dart';
 import 'package:bus_tracker_app/feature/trip_selection/domain/entities/trip.dart';
 import 'package:bus_tracker_app/feature/trip_selection/domain/usecase/get_active_trip.dart';

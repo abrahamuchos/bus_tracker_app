@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:bus_tracker_app/core/usecase/usecase.dart';
 import 'package:bus_tracker_app/feature/location_publishing/domain/entities/position.dart';
 import 'package:bus_tracker_app/feature/location_publishing/domain/error/location_failure.dart';
