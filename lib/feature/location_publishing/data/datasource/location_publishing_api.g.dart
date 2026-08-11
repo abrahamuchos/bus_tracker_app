@@ -25,7 +25,8 @@ class _LocationPublishingApi implements LocationPublishingApi {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = positionReq;
+    final _data = <String, dynamic>{};
+    _data.addAll(positionReq.toJson());
     final _options = _setStreamType<void>(
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(

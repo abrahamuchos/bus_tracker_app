@@ -10,7 +10,7 @@ class PositionRequestParams {
     return PositionRequestParams(lat: entity.lat, lng: entity.lng);
   }
 
-  Map<String, dynamic> toMap() => {'lat': lat, 'lng': lng};
+  Map<String, dynamic> toJson() => {'lat': lat, 'lng': lng};
 }
 
 
