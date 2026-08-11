@@ -10,7 +10,7 @@ enum LocationFailureType{
 class LocationFailure extends Failure{
   final LocationFailureType type;
 
-  const LocationFailure(super.message, this.type);
+  const LocationFailure(this.type, [super.message = 'Error to location']);
 
   @override
   List<Object?> get props => [...super.props, type];
